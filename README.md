@@ -11,6 +11,7 @@ pythonの実行環境を構築した状態でmain関数が書かれてあるス�
 python main.py showでその月のイベント情報を確認できます． 予約の際に必要なイベントIDの情報をこのコマンドの出力で確認することが多いです．予約可能な(つまりUIで青になっている)イベントに<-予約可能の矢印がついています．
 
 e.g.　出力例
+
 <img width="633" alt="image" src="https://github.com/zhangchunpu/badminton_auto_reserve/assets/65750259/eb307dfb-7693-4d51-a9df-b0afb5ca6f55">
 
 
@@ -22,9 +23,12 @@ python main.py showで確認したイベント番号を指定して予約する�
 python main.py historyで予約履歴を確認します．使う場面としてキャンセルする際に予約IDを指定する必要があるのでこのコマンドの出力で確認する感じです．
 
 e.g. 出力例
+
 <img width="1339" alt="image" src="https://github.com/zhangchunpu/badminton_auto_reserve/assets/65750259/a09c3e53-b4b9-4e11-9730-98eef6607777">
 
 
 ### キャンセル
+python main.py cancel 予約ID　でキャンセルします．
+予約IDはpython main.py historyで確認できます．　イベントIDと異なるのでご注意ください．
 
 
