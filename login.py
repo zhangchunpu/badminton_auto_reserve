@@ -63,7 +63,7 @@ def default_user_login():
     if session is not None:
         print("ログイン成功")
         return session
-    print("パスワードとユーザー名を入力してください")
+    print("パスワードとユーザー名を入力してください(もしくはデフォルトのユーザー名とパスワードを再設定してください)")
     session = input_login()
     return 
 
