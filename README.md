@@ -43,5 +43,5 @@ python main.py cancel 予約ID　でキャンセルします．
 
 ### setup
 pythonの構築および必要なライブラリのインストールが必要です．自分はpython 3.9.0を使いました．
-pythonを普段からお使いになっている方が多いと思うので環境構築の方法はここでは説明しませんが，pyenvでの構築をおすすめします．必要なライブラリもpip install -r requirementsでインストールできます．
+pythonを普段からお使いになっている方が多いと思うので環境構築の方法はここでは説明しませんが，pyenvでの構築をおすすめします．必要なライブラリもpip  `install -r requirements.txt` でインストールできます．
 pythonの環境構築方法: https://zenn.dev/kenghaya/articles/9f07914156fab5
