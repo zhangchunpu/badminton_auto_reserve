@@ -42,7 +42,7 @@ def login(login_id,password):
 
 
 """
-今のところ使われてません
+手動で
 """
 def input_login():
     while True:
@@ -59,14 +59,16 @@ def input_login():
     
 
 def default_user_login():
-    return login(username, password)
+    session = login(username, password)
+    if session is not None:
+        print("ログイン成功")
+        return session
+    print("パスワードとユーザー名を入力してください")
+    session = input_login()
+    return 
 
 """
 Test
 """
 if __name__ == "__main__":
     default_user_login()
-
-    
-
-
