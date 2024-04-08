@@ -5,8 +5,8 @@ import json
 from bs4 import BeautifulSoup
 
 # 必要最低限にしか書きたくないのでusername passwordは直で書いています．
-username = "ユーザー名"
-password = "パスワード"
+username = "chunpu"
+password = "chunpuchunpu123"
 
 login_url = "https://koto-hsc3.revn.jp/auth/login"
 logout_url = "https://koto-hsc3.revn.jp/auth/logout"
@@ -64,8 +64,7 @@ def default_user_login():
         print("ログイン成功")
         return session
     print("パスワードとユーザー名を入力してください(もしくはデフォルトのユーザー名とパスワードを再設定してください)")
-    session = input_login()
-    return 
+    return input_login()
 
 """
 Test
