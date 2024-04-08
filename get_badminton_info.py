@@ -72,9 +72,9 @@ def get_badminton_events():
     request_params["label_select_type"] = "other"
     request_params["null"] = ""
     request_params["tag_id"] = ""
-    request_params["tag_id[5][24]"] = "24"
-    request_params["tag_id[5][29]"] = "29"
-    request_params["tag_id[3][10]"] = "10"
+    request_params["tag_id[5][24]"] = "24" # 施設：江東区スポーツ会館
+    request_params["tag_id[5][29]"] = "29" # 施設：深川北スポーツセンター
+    request_params["tag_id[3][10]"] = "10" # 種目：バドミントン
     res = session.post(url,request_params)
     
     #カレンダのページソースを取得
@@ -85,7 +85,7 @@ def get_badminton_events():
     driver.get(res.url)
     
     #時間を置いてページソースを取得する
-    time.sleep(0.2)
+    time.sleep(1) # カレンダー表示まで少し時間があるのでsleep
     html = driver.page_source
     soup = BeautifulSoup(html,features="html.parser")
 
