@@ -7,6 +7,11 @@ def replace_space(string):
 
 def print_reservation_info(elems):
 
+    # ない場合はメッセージを出す
+    if not elems:
+        print("予約履歴はありません．WebPageから確認してください")
+        return
+
     color_dic = {"black":"\033[30m", "red":"\033[31m", "green":"\033[32m", "yellow":"\033[33m", "blue":"\033[34m", "end":"\033[0m"}
     
     for elem in elems:
@@ -27,9 +32,9 @@ def print_reservation_info(elems):
               f"予約場所:　{color_place}".ljust(35, " ")+
               f"ステータス: {color_status}".ljust(30, " ")+
               f"予約ID: {color_reserve_id}".ljust(30, " "))
+    return
 
 def get_reservations_history():
-    print("ログイン...")
     session = default_user_login()
     print("ページソースを取得...")
     history_page_source = session.get("https://koto-hsc3.revn.jp/reservations/history")
