@@ -1,6 +1,8 @@
 #!/Users/chunpu/.pyenv/shims/python
 
 import argparse
+import sys
+import os
 
 from cancel import cancel
 from login import login 
@@ -8,6 +10,8 @@ from get_badminton_info import *
 from get_reservation_history import *
 from reserve import *
 from group_reserve import group_reserve
+
+sys.stderr = open(os.devnull, "w")
 
 def main(args):
     if args.action == "reserve":
